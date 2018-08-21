@@ -21,32 +21,32 @@
 @implementation UILabel (Night)
 
 
-- (DKColorPicker)dk_textColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_textColorPicker));
+- (DKColorPicker)dk_textColor {
+    return objc_getAssociatedObject(self, @selector(dk_textColor));
 }
 
-- (void)dk_setTextColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_textColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setTextColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_textColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.textColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setTextColor:"];
 }
 
-- (DKColorPicker)dk_shadowColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_shadowColorPicker));
+- (DKColorPicker)dk_shadowColor {
+    return objc_getAssociatedObject(self, @selector(dk_shadowColor));
 }
 
-- (void)dk_setShadowColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_shadowColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setShadowColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_shadowColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.shadowColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setShadowColor:"];
 }
 
-- (DKColorPicker)dk_highlightedTextColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_highlightedTextColorPicker));
+- (DKColorPicker)dk_highlightedTextColor {
+    return objc_getAssociatedObject(self, @selector(dk_highlightedTextColor));
 }
 
-- (void)dk_setHighlightedTextColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_highlightedTextColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setHighlightedTextColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_highlightedTextColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.highlightedTextColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setHighlightedTextColor:"];
 }

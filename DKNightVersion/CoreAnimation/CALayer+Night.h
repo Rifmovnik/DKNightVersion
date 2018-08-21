@@ -11,8 +11,8 @@
 
 @interface CALayer (Night)
 
-@property (nonatomic, copy) DKColorPicker dk_shadowColorPicker;
-@property (nonatomic, copy) DKColorPicker dk_borderColorPicker;
-@property (nonatomic, copy) DKColorPicker dk_backgroundColorPicker;
+@property (nonatomic, copy) DKColorPicker dk_shadowColor;
+@property (nonatomic, copy) DKColorPicker dk_borderColor;
+@property (nonatomic, copy) DKColorPicker dk_backgroundColor;
 
 @end

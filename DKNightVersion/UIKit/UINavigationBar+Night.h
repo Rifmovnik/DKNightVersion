@@ -13,7 +13,7 @@
 
 @interface UINavigationBar (Night)
 
-@property (nonatomic, copy, setter = dk_setBarTintColorPicker:) DKColorPicker dk_barTintColorPicker;
-@property (nonatomic, copy, setter = dk_setTintColorPicker:) DKColorPicker dk_tintColorPicker;
+@property (nonatomic, copy, setter = dk_setBarTintColor:) DKColorPicker dk_barTintColor;
+@property (nonatomic, copy, setter = dk_setTintColor:) DKColorPicker dk_tintColor;
 
 @end

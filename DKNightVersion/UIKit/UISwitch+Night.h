@@ -13,7 +13,7 @@
 
 @interface UISwitch (Night)
 
-@property (nonatomic, copy, setter = dk_setOnTintColorPicker:) DKColorPicker dk_onTintColorPicker;
-@property (nonatomic, copy, setter = dk_setThumbTintColorPicker:) DKColorPicker dk_thumbTintColorPicker;
+@property (nonatomic, copy, setter = dk_setOnTintColor:) DKColorPicker dk_onTintColor;
+@property (nonatomic, copy, setter = dk_setThumbTintColor:) DKColorPicker dk_thumbTintColor;
 
 @end

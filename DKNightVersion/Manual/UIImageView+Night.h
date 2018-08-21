@@ -13,11 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImageView (Night)
 
-- (instancetype)dk_initWithImagePicker:(DKImagePicker)picker;
+- (instancetype)dk_initWithImage:(DKImagePicker)picker;
 
-@property (nullable, nonatomic, copy, setter = dk_setImagePicker:) DKImagePicker dk_imagePicker;
+@property (nullable, nonatomic, copy, setter = dk_setImage:) DKImagePicker dk_image;
 
-@property (nonatomic, copy, setter = dk_setAlphaPicker:) DKAlphaPicker dk_alphaPicker;
+@property (nonatomic, copy, setter = dk_setAlpha:) DKAlphaPicker dk_alpha;
 
 @end
 

@@ -72,7 +72,7 @@
  *      #ffffff  #343434 BG
  *      #aaaaaa  #313131 SEP
  *  
- *      self.view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
+ *      self.view.dk_backgroundColor = DKColorPickerWithKey(BG);
  *
  *  If current themeVersion is NORMAL, view's background color will be set to #ffffff. When theme
  *  changes, it will automatically reload color from global color table and update current color

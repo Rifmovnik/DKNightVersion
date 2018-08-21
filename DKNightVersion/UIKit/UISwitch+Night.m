@@ -21,22 +21,22 @@
 @implementation UISwitch (Night)
 
 
-- (DKColorPicker)dk_onTintColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_onTintColorPicker));
+- (DKColorPicker)dk_onTintColor {
+    return objc_getAssociatedObject(self, @selector(dk_onTintColor));
 }
 
-- (void)dk_setOnTintColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_onTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setOnTintColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_onTintColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.onTintColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setOnTintColor:"];
 }
 
-- (DKColorPicker)dk_thumbTintColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_thumbTintColorPicker));
+- (DKColorPicker)dk_thumbTintColor {
+    return objc_getAssociatedObject(self, @selector(dk_thumbTintColor));
 }
 
-- (void)dk_setThumbTintColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_thumbTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setThumbTintColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_thumbTintColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.thumbTintColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setThumbTintColor:"];
 }

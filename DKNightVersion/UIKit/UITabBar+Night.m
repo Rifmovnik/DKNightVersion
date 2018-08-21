@@ -21,12 +21,12 @@
 @implementation UITabBar (Night)
 
 
-- (DKColorPicker)dk_barTintColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_barTintColorPicker));
+- (DKColorPicker)dk_barTintColor {
+    return objc_getAssociatedObject(self, @selector(dk_barTintColor));
 }
 
-- (void)dk_setBarTintColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_barTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setBarTintColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_barTintColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.barTintColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setBarTintColor:"];
 }

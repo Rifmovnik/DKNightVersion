@@ -17,7 +17,7 @@
 
 @implementation UIButton (Night)
 
-- (void)dk_setTitleColorPicker:(DKColorPicker)picker forState:(UIControlState)state {
+- (void)dk_setTitleColor:(DKColorPicker)picker forState:(UIControlState)state {
     [self setTitleColor:picker(self.dk_manager.themeVersion) forState:state];
     NSString *key = [NSString stringWithFormat:@"%@", @(state)];
     NSMutableDictionary *dictionary = [self.pickers valueForKey:key];

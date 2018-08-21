@@ -33,20 +33,20 @@
     self.navigationItem.leftBarButtonItem = item;
 
     UIBarButtonItem *normalItem = [[UIBarButtonItem alloc] initWithTitle:@"Normal" style:UIBarButtonItemStylePlain target:self action:@selector(normal)];
-    normalItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
+    normalItem.dk_tintColor = DKColorPickerWithKey(TINT);
     UIBarButtonItem *nightItem = [[UIBarButtonItem alloc] initWithTitle:@"Night" style:UIBarButtonItemStylePlain target:self action:@selector(night)];
-    nightItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
+    nightItem.dk_tintColor = DKColorPickerWithKey(TINT);
     UIBarButtonItem *redItem = [[UIBarButtonItem alloc] initWithTitle:@"Red" style:UIBarButtonItemStylePlain target:self action:@selector(red)];
-    redItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
+    redItem.dk_tintColor = DKColorPickerWithKey(TINT);
 
     self.navigationItem.rightBarButtonItems = @[normalItem, nightItem, redItem];
 
-//    self.tableView.dk_backgroundColorPicker =  DKColorPickerWithKey(BG);
-    self.tableView.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+//    self.tableView.dk_backgroundColor =  DKColorPickerWithKey(BG);
+    self.tableView.dk_backgroundColor = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
     self.tableView.dk_separatorColorPicker = DKColorPickerWithKey(SEP);
-    navigationLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
-    self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
-    self.navigationItem.leftBarButtonItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
+    navigationLabel.dk_textColor = DKColorPickerWithKey(TEXT);
+    self.navigationController.navigationBar.dk_barTintColor = DKColorPickerWithKey(BAR);
+    self.navigationItem.leftBarButtonItem.dk_tintColor = DKColorPickerWithKey(TINT);
 }
 
 - (void)night {
@@ -90,7 +90,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    cell.dk_cellTintColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+    cell.dk_cellTintColor = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
 
     return cell;
 }

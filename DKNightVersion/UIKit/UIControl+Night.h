@@ -13,6 +13,6 @@
 
 @interface UIControl (Night)
 
-@property (nonatomic, copy, setter = dk_setTintColorPicker:) DKColorPicker dk_tintColorPicker;
+@property (nonatomic, copy, setter = dk_setTintColor:) DKColorPicker dk_tintColor;
 
 @end

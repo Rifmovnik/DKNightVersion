@@ -21,22 +21,22 @@
 @implementation UIPageControl (Night)
 
 
-- (DKColorPicker)dk_pageIndicatorTintColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_pageIndicatorTintColorPicker));
+- (DKColorPicker)dk_pageIndicatorTintColor {
+    return objc_getAssociatedObject(self, @selector(dk_pageIndicatorTintColor));
 }
 
-- (void)dk_setPageIndicatorTintColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_pageIndicatorTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setPageIndicatorTintColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_pageIndicatorTintColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.pageIndicatorTintColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setPageIndicatorTintColor:"];
 }
 
-- (DKColorPicker)dk_currentPageIndicatorTintColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_currentPageIndicatorTintColorPicker));
+- (DKColorPicker)dk_currentPageIndicatorTintColor {
+    return objc_getAssociatedObject(self, @selector(dk_currentPageIndicatorTintColor));
 }
 
-- (void)dk_setCurrentPageIndicatorTintColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_currentPageIndicatorTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setCurrentPageIndicatorTintColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_currentPageIndicatorTintColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.currentPageIndicatorTintColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setCurrentPageIndicatorTintColor:"];
 }

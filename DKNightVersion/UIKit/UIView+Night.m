@@ -21,22 +21,22 @@
 @implementation UIView (Night)
 
 
-- (DKColorPicker)dk_backgroundColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_backgroundColorPicker));
+- (DKColorPicker)dk_backgroundColor {
+    return objc_getAssociatedObject(self, @selector(dk_backgroundColor));
 }
 
-- (void)dk_setBackgroundColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_backgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setBackgroundColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_backgroundColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.backgroundColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setBackgroundColor:"];
 }
 
-- (DKColorPicker)dk_tintColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_tintColorPicker));
+- (DKColorPicker)dk_tintColor {
+    return objc_getAssociatedObject(self, @selector(dk_tintColor));
 }
 
-- (void)dk_setTintColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_tintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setTintColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_tintColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.tintColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setTintColor:"];
 }

@@ -32,9 +32,9 @@
     [self.view addSubview:button];
     [self.view addSubview:switchButton];
 
-    self.view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
-    [button dk_setTitleColorPicker:DKColorPickerWithKey(TINT) forState:UIControlStateNormal];
-    [switchButton dk_setTitleColorPicker:DKColorPickerWithKey(TINT) forState:UIControlStateNormal];
+    self.view.dk_backgroundColor = DKColorPickerWithKey(BG);
+    [button dk_setTitleColor:DKColorPickerWithKey(TINT) forState:UIControlStateNormal];
+    [switchButton dk_setTitleColor:DKColorPickerWithKey(TINT) forState:UIControlStateNormal];
     
 }
 

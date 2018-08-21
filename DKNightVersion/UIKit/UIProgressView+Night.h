@@ -13,7 +13,7 @@
 
 @interface UIProgressView (Night)
 
-@property (nonatomic, copy, setter = dk_setProgressTintColorPicker:) DKColorPicker dk_progressTintColorPicker;
-@property (nonatomic, copy, setter = dk_setTrackTintColorPicker:) DKColorPicker dk_trackTintColorPicker;
+@property (nonatomic, copy, setter = dk_setProgressTintColor:) DKColorPicker dk_progressTintColor;
+@property (nonatomic, copy, setter = dk_setTrackTintColor:) DKColorPicker dk_trackTintColor;
 
 @end

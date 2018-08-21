@@ -21,12 +21,12 @@
 @implementation UITextView (Night)
 
 
-- (DKColorPicker)dk_textColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_textColorPicker));
+- (DKColorPicker)dk_textColor {
+    return objc_getAssociatedObject(self, @selector(dk_textColor));
 }
 
-- (void)dk_setTextColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_textColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setTextColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_textColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.textColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setTextColor:"];
 }

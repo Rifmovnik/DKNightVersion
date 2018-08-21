@@ -13,6 +13,6 @@
 
 @interface UISearchBar (Night)
 
-@property (nonatomic, copy, setter = dk_setBarTintColorPicker:) DKColorPicker dk_barTintColorPicker;
+@property (nonatomic, copy, setter = dk_setBarTintColor:) DKColorPicker dk_barTintColor;
 
 @end

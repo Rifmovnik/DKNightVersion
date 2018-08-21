@@ -22,12 +22,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
-    self.navigationController.navigationBar.dk_tintColorPicker = DKColorPickerWithKey(TINT);
+    self.view.dk_backgroundColor = DKColorPickerWithKey(BG);
+    self.navigationController.navigationBar.dk_tintColor = DKColorPickerWithKey(TINT);
 
     UITextField *textField = [[UITextField alloc] init];
     textField.frame = self.view.frame;
-    textField.dk_textColorPicker = DKColorPickerWithKey(TEXT);
+    textField.dk_textColor = DKColorPickerWithKey(TEXT);
     [self.view addSubview:textField];
 }
 

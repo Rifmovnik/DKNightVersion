@@ -86,7 +86,7 @@ NORMAL   NIGHT
 And then, set color picker like this with `DKColorPickerWithKey`, which generates a DKColorPicker block
 
 ```objectivec
-self.view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
+self.view.dk_backgroundColor = DKColorPickerWithKey(BG);
 ```
 
 After the current theme version change to `DKThemeVersionNight`, the view background color will switch to `#343434`.
@@ -138,8 +138,8 @@ Every time the current theme version changes, `DKNightVersionManager` will post 
 `DKColorPicker` is the core of DKNightVersion. And this lib adds dk_colorPicker to every UIKit and Core Animation components. Ex:
 
 ```objectivec
-@property (nonatomic, copy, setter = dk_setBackgroundColorPicker:) DKColorPicker dk_backgroundColorPicker;
-@property (nonatomic, copy, setter = dk_setTintColorPicker:) DKColorPicker dk_tintColorPicker;
+@property (nonatomic, copy, setter = dk_setBackgroundColor:) DKColorPicker dk_backgroundColor;
+@property (nonatomic, copy, setter = dk_setTintColor:) DKColorPicker dk_tintColor;
 ```
 
 DKColorPicker is defined in `DKColor.h` file receives a `DKThemeVersion` as the parameter and returns a `UIColor`.
@@ -151,13 +151,13 @@ typedef UIColor *(^DKColorPicker)(DKThemeVersion *themeVersion);
 + Use `DKColorPickerWithKey(key)` to obtain `DKColorPicker` from `DKColorTable`
 
     ```objectivec
-    view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
+    view.dk_backgroundColor = DKColorPickerWithKey(BG);
     ```
 
 + Use `DKColorPickerWithRGB` to generate a `DKColorPicker`
 
     ```objectivec
-    view.dk_backgroundColorPicker =  DKColorPickerWithRGB(0xffffff, 0x343434);
+    view.dk_backgroundColor =  DKColorPickerWithRGB(0xffffff, 0x343434);
     ```
 
 ### DKColorTable
@@ -219,7 +219,7 @@ This will reload color setting from `color.txt` file.
 If you'd want to create some temporary DKColorPicker, you can use these methods.
 
 ```objectivec
-view.dk_backgroundColorPicker =  DKColorPickerWithRGB(0xffffff, 0x343434);
+view.dk_backgroundColor =  DKColorPickerWithRGB(0xffffff, 0x343434);
 ```
 
 `DKColorPickerWithRGB` will return a DKColorPicker which set background color to `#ffffff` when current theme version is `DKThemeVersionNormal` and `#343434` when it is `DKThemeVersionNight`.
@@ -270,7 +270,7 @@ DKNightVersion provides an extremely powerful feature which can generate dk_xxxC
 @pickerify(TableViewCell, cellTintColor)
 ```
 
-This will automatically generate `dk_cellTintColorPicker` for you.
+This will automatically generate `dk_cellTintColor` for you.
 
 
 ### DKImagePicker
@@ -278,7 +278,7 @@ This will automatically generate `dk_cellTintColorPicker` for you.
 Use `DKImagePicker` to change images when `manager.themeVersion` changes.
 
 ```objectivec
-imageView.dk_imagePicker = DKImagePickerWithNames(@"normal", @"night");
+imageView.dk_image = DKImagePickerWithNames(@"normal", @"night");
 ```
 
 The first image is used for `NORMAL` theme the second is used for `NIGHT` theme, cuz themes order in 
@@ -298,7 +298,7 @@ NORMAL   NIGHT    RED
 Set your image picker in this order:
 
 ```objectivec
-imageView.dk_imagePicker = DKImagePickerWithNames(@"normal", @"night", @"red");
+imageView.dk_image = DKImagePickerWithNames(@"normal", @"night", @"red");
 ```
 
 The order of images or names is exactly the same in DKColorTable.txt file.

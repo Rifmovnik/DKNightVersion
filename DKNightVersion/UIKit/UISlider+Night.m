@@ -21,32 +21,32 @@
 @implementation UISlider (Night)
 
 
-- (DKColorPicker)dk_minimumTrackTintColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_minimumTrackTintColorPicker));
+- (DKColorPicker)dk_minimumTrackTintColor {
+    return objc_getAssociatedObject(self, @selector(dk_minimumTrackTintColor));
 }
 
-- (void)dk_setMinimumTrackTintColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_minimumTrackTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setMinimumTrackTintColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_minimumTrackTintColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.minimumTrackTintColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setMinimumTrackTintColor:"];
 }
 
-- (DKColorPicker)dk_maximumTrackTintColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_maximumTrackTintColorPicker));
+- (DKColorPicker)dk_maximumTrackTintColor {
+    return objc_getAssociatedObject(self, @selector(dk_maximumTrackTintColor));
 }
 
-- (void)dk_setMaximumTrackTintColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_maximumTrackTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setMaximumTrackTintColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_maximumTrackTintColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.maximumTrackTintColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setMaximumTrackTintColor:"];
 }
 
-- (DKColorPicker)dk_thumbTintColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_thumbTintColorPicker));
+- (DKColorPicker)dk_thumbTintColor {
+    return objc_getAssociatedObject(self, @selector(dk_thumbTintColor));
 }
 
-- (void)dk_setThumbTintColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_thumbTintColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setThumbTintColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_thumbTintColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.thumbTintColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setThumbTintColor:"];
 }

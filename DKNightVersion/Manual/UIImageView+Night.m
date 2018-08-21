@@ -19,29 +19,29 @@
 
 @implementation UIImageView (Night)
 
-- (instancetype)dk_initWithImagePicker:(DKImagePicker)picker {
+- (instancetype)dk_initWithImage:(DKImagePicker)picker {
     UIImageView *imageView = [self initWithImage:picker(self.dk_manager.themeVersion)];
-    imageView.dk_imagePicker = [picker copy];
+    imageView.dk_image = [picker copy];
     return imageView;
 }
 
-- (DKImagePicker)dk_imagePicker {
-    return objc_getAssociatedObject(self, @selector(dk_imagePicker));
+- (DKImagePicker)dk_image {
+    return objc_getAssociatedObject(self, @selector(dk_image));
 }
 
-- (void)dk_setImagePicker:(DKImagePicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_imagePicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setImage:(DKImagePicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_image), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.image = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setImage:"];
 
 }
 
-- (DKAlphaPicker)dk_alphaPicker {
-    return objc_getAssociatedObject(self, @selector(dk_alphaPicker));
+- (DKAlphaPicker)dk_alpha {
+    return objc_getAssociatedObject(self, @selector(dk_alpha));
 }
 
-- (void)dk_setAlphaPicker:(DKAlphaPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_alphaPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setAlpha:(DKAlphaPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_alpha), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.alpha = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setAlpha:"];
 }

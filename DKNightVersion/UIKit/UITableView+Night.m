@@ -41,22 +41,22 @@
     [self.pickers setValue:[picker copy] forKey:@"setSectionIndexColor:"];
 }
 
-- (DKColorPicker)dk_sectionIndexBackgroundColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_sectionIndexBackgroundColorPicker));
+- (DKColorPicker)dk_sectionIndexBackgroundColor {
+    return objc_getAssociatedObject(self, @selector(dk_sectionIndexBackgroundColor));
 }
 
-- (void)dk_setSectionIndexBackgroundColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_sectionIndexBackgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setSectionIndexBackgroundColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_sectionIndexBackgroundColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.sectionIndexBackgroundColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setSectionIndexBackgroundColor:"];
 }
 
-- (DKColorPicker)dk_sectionIndexTrackingBackgroundColorPicker {
-    return objc_getAssociatedObject(self, @selector(dk_sectionIndexTrackingBackgroundColorPicker));
+- (DKColorPicker)dk_sectionIndexTrackingBackgroundColor {
+    return objc_getAssociatedObject(self, @selector(dk_sectionIndexTrackingBackgroundColor));
 }
 
-- (void)dk_setSectionIndexTrackingBackgroundColorPicker:(DKColorPicker)picker {
-    objc_setAssociatedObject(self, @selector(dk_sectionIndexTrackingBackgroundColorPicker), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)dk_setSectionIndexTrackingBackgroundColor:(DKColorPicker)picker {
+    objc_setAssociatedObject(self, @selector(dk_sectionIndexTrackingBackgroundColor), picker, OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.sectionIndexTrackingBackgroundColor = picker(self.dk_manager.themeVersion);
     [self.pickers setValue:[picker copy] forKey:@"setSectionIndexTrackingBackgroundColor:"];
 }
